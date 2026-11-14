@@ -1,0 +1,21 @@
+{
+  "name": "lernwelt-anki-addon",
+  "version": "1.0.0",
+  "private": true,
+  "license": "UNLICENSED",
+  "type": "module",
+  "description": "Lernwelt (Wissensturm) als Add-on für Anki – baut die Oberfläche aus apps/web und packt das Add-on",
+  "scripts": {
+    "build": "vite build --config \"$PWD/vite.config.mjs\"",
+    "pack": "npm run build && python3 scripts/source.py lernwelt/source.zip && python3 scripts/pack.py"
+  },
+  "dependencies": {
+    "@fontsource-variable/nunito": "^5.3.0",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.1.2",
+    "vite": "^8.3.5"
+  }
+}
